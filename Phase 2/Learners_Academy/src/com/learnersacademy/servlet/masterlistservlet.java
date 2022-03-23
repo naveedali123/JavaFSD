@@ -41,39 +41,89 @@ public class masterlistservlet extends HttpServlet {
 				
 				int Class = Integer.parseInt(request.getParameter("Class"));
 				
+				
 				DBConnection dbConnection = new DBConnection(dbUrl, username, password);
 
-				PreparedStatement stmnt = dbConnection.getConnection().prepareStatement ("select s.fname,t.tfname,sb.name from students s, teachers t,subjects sb where s.class=? AND t.class=? AND sb.class=? ");
+				PreparedStatement stmnt1 = dbConnection.getConnection().prepareStatement ("select fname from students  where class=? ");
 				
-				stmnt.setInt(1, Class);
-				stmnt.setInt(2, Class);
-				stmnt.setInt(3, Class);
+				PreparedStatement stmnt2 = dbConnection.getConnection().prepareStatement ("select tfname from teachers  where class=? ");
+				
+				PreparedStatement stmnt3 = dbConnection.getConnection().prepareStatement ("select name from subjects  where class=?");
+				
+				stmnt1.setInt(1, Class);
+				stmnt2.setInt(1, Class);
+				stmnt3.setInt(1, Class);
 
-			     ResultSet rs =stmnt.executeQuery();
+			     ResultSet rs1 =stmnt1.executeQuery();
+			     ResultSet rs2 =stmnt2.executeQuery();
+			     ResultSet rs3 =stmnt3.executeQuery();
+			     out.println("<a style='text-align: right'href=\"classes-list.jsp\">DashBoard</a>");
+			     out.println("<h1 style='text-align: center'>Class Report</h1>");
+				out.println("<div float='left' style='display: flex'>");
 				
-				out.println("<div align='center'>");
-				out.println("<h1>Class Report</h1>");
 				out.println("<style> table,td,th {border:1px solid blue; padding:10px;}</style>");
 				out.print("<table>");
 				out.print("<th> Student Name </th>");
 
-				out.print("<th> Teacher Name </th>");
+				/*out.print("<th> Teacher Name </th>");
 
+				out.print("<th> Subject Name </th>");*/
+
+				out.print ("</tr>");
+
+				while (rs1.next()){
+
+
+				out.print("<tr><td>"+ rs1.getString("fname") + " </td></tr>");
+
+				}
+				/*+ rs.getString("tfname") + " </td><td>"+ rs.getString("name") + " </td>"*/
+				
+				out.print ("</table>");
+				//out.println("</div>");
+				
+				out.println("<style> table,td,th {border:1px solid blue; padding:10px;}</style>");
+				out.print("<table style='margin-left: 25px'>");
+			/*	out.print("<th> Student Name </th>");*/
+
+			out.print("<th> Teacher Name </th>");
+
+				
+
+				out.print ("</tr>");
+
+				while (rs2.next()){
+
+
+				out.print("<tr><td>"+ rs2.getString("tfname") + " </td></tr>");
+
+				}
+				/*+ rs.getString("tfname") + " </td><td>"+ rs.getString("name") + " </td>"*/
+				
+				out.print ("</table>");
+				//out.println("</div>");
+				
+				out.print("<table style='margin-left: 15px'>");
+				
 				out.print("<th> Subject Name </th>");
 
 				out.print ("</tr>");
 
-				while (rs.next()){
+				while (rs3.next()){
 
 
-				out.print("<tr><td>"+ rs.getString("fname") + " </td><td>"+ rs.getString("tfname") + " </td><td>"+ rs.getString("name") + " </td>");
+				out.print("<tr><td>"+ rs3.getString("name") + " </td></tr>");
 
 				}
+				/*+ rs.getString("tfname") + " </td><td>"+ rs.getString("name") + " </td>"*/
+				
 				out.print ("</table>");
 				out.println("</div>");
-				stmnt.close();
+				stmnt1.close();
+				stmnt2.close();
+				stmnt3.close();
 				dbConnection.closeConnection();
-				out.println("<a href=\"classes-list.jsp\">DashBoard</a>");
+				
 			}catch (Exception e) {
 	            e.printStackTrace();
 	            
