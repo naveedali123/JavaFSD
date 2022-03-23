@@ -53,13 +53,13 @@ public class masterlistservlet extends HttpServlet {
 				
 				out.println("<div align='center'>");
 				out.println("<h1>Class Report</h1>");
-				out.println("<style> table,td,th {border:1px solid green; padding:10px;}</style>");
+				out.println("<style> table,td,th {border:1px solid blue; padding:10px;}</style>");
 				out.print("<table>");
 				out.print("<th> Student Name </th>");
 
 				out.print("<th> Teacher Name </th>");
 
-				out.print("<th> Subjet Name </th>");
+				out.print("<th> Subject Name </th>");
 
 				out.print ("</tr>");
 
@@ -73,7 +73,7 @@ public class masterlistservlet extends HttpServlet {
 				out.println("</div>");
 				stmnt.close();
 				dbConnection.closeConnection();
-				out.println("<a href=\"classes-list.jsp\">Click here to go back</a>");
+				out.println("<a href=\"classes-list.jsp\">DashBoard</a>");
 			}catch (Exception e) {
 	            e.printStackTrace();
 	            

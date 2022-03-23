@@ -69,7 +69,7 @@ public class assignsubservlet extends HttpServlet {
 				out.println("<div align='center'>");
 				out.println("<h1>Subject assigned Succesfully</h1>");
 				out.println("</div>");
-				out.println("<a href=\"classes-list.jsp\">Click here to go back</a>");
+				out.println("<a href=\"classes-list.jsp\">DashBoard</a>");
 				
 			}catch (Exception e) {
 	            e.printStackTrace();
