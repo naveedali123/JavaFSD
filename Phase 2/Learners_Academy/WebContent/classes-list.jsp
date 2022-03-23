@@ -23,44 +23,16 @@
 
 			<div id="content">
 				
-				
-				 <form action="masterlist" method="POST">  
-        <div class="container"> 
-          
-        	
-			
-			Class name:
-			<select name="Class" id="Class">
-							<option value="1">ML</option>
-							<option value="2">JAVA</option>
-
-						</select>	<br/><br/>	
-            <input type="submit">
-    
-        </div>   
-    </form>  
-				
-				<%-- <table>
+					
+			 	<table>
 
 					<tr>
 
 						<th>ID</th>					
 						<th>Name</th>
-						<th>Master list</th>
-						
-					</tr>
-					<tr>
-					<td>1</td>
-					<td>ML</td>
-					<td><a href="masterlistservlet">List</a></td>
+												
 					</tr>
 					
-					<tr>
-					<td>2</td>
-					<td>JAVA</td>
-					<td><a href="masterlistservlet">List</a></td>
-					</tr>
-
 					<c:forEach var="tempClass" items="${CLASSES_LIST }">
 						<tr>
 
@@ -74,19 +46,14 @@
 							<td>${tempClass.id}</td>
 							<td>${tempClass.name}</td>
 							
-							 
+							
 						</tr>
 
 					</c:forEach>
-					<!-- <tr>
-					<td>1</td>
-					<td>2</td>
-					</tr> -->
-					
-					
-					
+							
+								
 
-				</table> --%>
+				</table> 
 			</div>
 		</div>
 	</div>

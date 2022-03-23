@@ -77,7 +77,7 @@ public class DbRetrieve {
 			while (rs.next()) {
 
 				int id = rs.getInt("id");
-				String firstName = rs.getString("fname");
+				String firstName = rs.getString("tfname");
 				String lastName = rs.getString("lname");
 				int age = rs.getInt("age");
 
@@ -183,7 +183,7 @@ public class DbRetrieve {
 			 while (rs.next()) {
 
 				int id = rs.getInt("id");
-				String fname = rs.getString("fname");
+				String fname = rs.getString("tfname");
 				String lname = rs.getString("lname");
 				int age = rs.getInt("age");
 				theTeacher = new Teacher(id, fname, lname, age);

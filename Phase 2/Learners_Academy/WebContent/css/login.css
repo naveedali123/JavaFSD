@@ -1,8 +1,13 @@
 Body {  
   font-family: Calibri, Helvetica, sans-serif;  
-  background-color: white;  
+  background-repeat: no-repeat;
+ 	 background-attachment: fixed;
+ 	 background-size: 100% 100%; 
 
-}  
+} 
+h1{
+	font-family:Cursive;
+} 
 button {   
 	  justify-content: center;
        background-color: #33D8FF;   
@@ -12,6 +17,7 @@ button {
         margin: 10px 0px;   
         border: none;   
         cursor: pointer;   
+        font-weight: bold;
          }  
           
  form {   

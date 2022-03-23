@@ -3,14 +3,14 @@ package com.learnersacademy.models;
 public class Teacher {
 	
 	private int id;
-	private String fname;
+	private String tfname;
 	private String lname;
 	private int age;
 	
-	public Teacher(int id, String fname, String lname, int age) {
+	public Teacher(int id, String tfname, String lname, int age) {
 		super();
 		this.id = id;
-		this.fname = fname;
+		this.tfname = tfname;
 		this.lname = lname;
 		this.age = age;
 	}
@@ -24,11 +24,11 @@ public class Teacher {
 	}
 
 	public String getFname() {
-		return fname;
+		return tfname;
 	}
 
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setFname(String tfname) {
+		this.tfname = tfname;
 	}
 
 	public String getLname() {

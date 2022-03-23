@@ -38,30 +38,16 @@ tr:nth-child(odd) {background: #BBBBBB}
 #container h3 {color: #000;}
 #container #content {margin-top: 20px;}
 
-.add-student-button {
-	border: 1px solid #666; 
-	border-radius: 5px; 
-	padding: 4px; 
-	font-size: 12px;
-	font-weight: bold;
-	width: 120px; 
-	padding: 5px 10px; 
-	
-	margin-bottom: 15px;
-	background: #cccccc;
-}
-
-
 
 .sidenav  {
   height: 100%;
-  width: 200px;
+  width: 230px;
   border-color: #0775d3;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #FFFFFF;
+  background-color: #cbe7eb;
   overflow-x: hidden;
   padding-top: 20px;
   
@@ -70,7 +56,7 @@ tr:nth-child(odd) {background: #BBBBBB}
 .sidenav a {
   padding: 6px 6px 6px 32px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 20px;
   color: #0775d3;
   display: block;
 }
@@ -101,8 +87,7 @@ tr:nth-child(odd) {background: #BBBBBB}
 
 .bar-item{
 	
-		
-		border-color: #0775d3;
+		border-color: white;
 		border-width: 3px;
 		border-bottom: .5px solid rgba(255, 255, 255, 0.247);
 		 
