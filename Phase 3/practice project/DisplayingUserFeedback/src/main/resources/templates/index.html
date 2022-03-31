@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>User Feedback</title>
+</head>
+<body>
+	
+		<div align="center">
+		<h1>FEEDBACK FORM</h1>
+				<form action="submitFeedback" method="post">
+				Enter the feedback/comments below
+				<br/><textarea id="comments" name="comments" rows="4" cols="50" ></textarea><br/>
+					Give the Ratings
+							<select name="ratings" id="ratings">
+								<option value="1">1 Star</option>
+								<option value="2">2 Star</option>
+								<option value="3">3 Star</option>
+								<option value="4">4 Star</option>
+								<option value="5">5 Star</option>
+							</select><br/>
+						
+							<input name="Submit" type="submit" value="Submit" />
+						
+				</form>
+			</div>	
+</body>
+</html>
