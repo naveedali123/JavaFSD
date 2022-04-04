@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Sporty Shoes</title>
+</head>
+<body>
+		
+		<div align="right" style="margin-right: 20px">
+			<a href="dashboard" style="font-size: 20px">DashBoard</a> <br><br> <a href="/" style="font-size: 20px">Logout</a>
+		</div>
+	
+		<div align='center'>
+		<h1>PURCHASE REPORT OF PRODUCT</h1>
+			<form action="purchaseReport" method="post">
+				Product Category :
+				<select name="category" id="category">
+							<option value="1">Men's Shoes</option>
+							<option value="2">Women's Shoes</option>
+							<option value="3">Children's Shoes</option>
+						</select><br><br>
+					Date of Purchase :
+						
+					<input type="text" name="purchasedate" placeholder="yyyy-mm-dd" required/>
+						<br><br>
+					<input type="submit" value="Submit" />
+			</form>
+	  </div>
+	
+</body>
+</html>
