@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Spring Security</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+<body>
+	<div align='center'>
+		<h1>USER LOGIN</h1>
+			<form action="userLogin" method="post" class="form-signin">
+				<table border="1" cellpadding="10">
+					<tr>
+						<th>User Email</th>
+						<td><input type="email" name="useremail" class="form-control" required></td>
+					</tr>
+					<tr>
+						<th>User Password</th>
+						<td><input type="password" name="userpassword" class="form-control" required></td>
+					</tr>
+					<tr>
+						<td colspan="2" align="center">
+						<input type="submit" value="Login" class="btn btn-lg btn-primary btn-block"/></td>
+					</tr>
+				</table>
+			</form>
+	  </div>
+</body>
+</html>
