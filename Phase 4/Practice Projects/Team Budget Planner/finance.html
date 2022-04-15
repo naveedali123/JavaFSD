@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Budget Planner</title>
+  </head>
+  <style>
+    th,
+    td,
+    p,
+    input {
+      font: 14px Verdana;
+    }
+
+    table,
+    th,
+    td {
+      border: solid 1px #ddd;
+      border-collapse: collapse;
+      padding: 2px 3px;
+      text-align: center;
+    }
+
+    th {
+      font-weight: bold;
+    }
+  </style>
+  <body onload="CreateTableFromJSON()">
+    <script src="finance.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Deal Id</th>
+          <th>client_name</th>
+          <th>project_name</th>
+          <th>project_manager</th>
+          <th>project_cost</th>
+        </tr>
+      </thead>
+      <tbody class="update" id="body"></tbody>
+    </table>
+    <input
+      type="button"
+      onclick="UpdateCost()"
+      value="Update Cost"
+      id="project_cost"
+    />
+  </body>
+</html>

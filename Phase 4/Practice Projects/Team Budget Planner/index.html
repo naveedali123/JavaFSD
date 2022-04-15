@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Budget Planner</title>
+  </head>
+
+  <style>
+    th,
+    td,
+    p,
+    input {
+      font-size: 14px Verdana;
+    }
+
+    table,
+    th,
+    td {
+      border: solid 1px #ddd;
+      border-collapse: collapse;
+      padding: 2px 3px;
+      text-align: center;
+    }
+
+    .center {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    th {
+      font-weight: bold;
+    }
+
+    label {
+      display: inline-block;
+      width: 140px;
+      text-align: right;
+    }
+  </style>
+
+  <body onload="CreateTableFromJSON()">
+    <script src="table-content.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <table class="center">
+      <thead>
+        <tr>
+          <th>Deal Id</th>
+          <th>client_name</th>
+          <th>project_name</th>
+          <th>project_manager</th>
+          <th>project_cost</th>
+          <th>DELETE</th>
+        </tr>
+      </thead>
+      <tbody id="body"></tbody>
+    </table>
+    <br>
+    <hr width="50%">
+    <div style="text-align: center">
+      <h3>Add New Deal</h3>
+
+      <label>Client Name</label>
+      <input type="text" id="clientNameInput" /><br /><br />
+
+      <label>Project Name</label>
+      <input type="text" id="projectNameInput" /><br /><br />
+
+      <label>Project Manager</label>
+      <input type="text" id="projectManagerInput" /><br /><br />
+
+      <label>Project Cost</label>
+      <input type="number" id="projectCostInput" /><br /><br />
+      <br />
+      <input type="button" onclick="AddNewDeal()" value="Save" />
+        &nbsp;
+      <a href="finance.html" target="_blank"
+        ><button>finance department</button></a
+      >
+    </div>
+  </body>
+</html>
