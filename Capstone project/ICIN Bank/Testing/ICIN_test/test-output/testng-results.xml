@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="18696" started-at="2020-08-20T13:35:30 IST" finished-at="2020-08-20T13:35:49 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="18696" started-at="2020-08-20T13:35:30 IST" finished-at="2020-08-20T13:35:49 IST">
+      <class name="frontEndTesting.RegistrationTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:frontEndTesting.RegistrationTest@7494e528]" name="setUp" is-config="true" duration-ms="8737" started-at="2020-08-20T13:35:30 IST" finished-at="2020-08-20T13:35:39 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="registerUser()[pri:0, instance:frontEndTesting.RegistrationTest@7494e528]" name="registerUser" duration-ms="4593" started-at="2020-08-20T13:35:39 IST" finished-at="2020-08-20T13:35:44 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUser -->
+        <test-method status="PASS" signature="registerUser2()[pri:0, instance:frontEndTesting.RegistrationTest@7494e528]" name="registerUser2" duration-ms="4838" started-at="2020-08-20T13:35:44 IST" finished-at="2020-08-20T13:35:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerUser2 -->
+        <test-method status="PASS" signature="cleanUp()[pri:0, instance:frontEndTesting.RegistrationTest@7494e528]" name="cleanUp" is-config="true" duration-ms="475" started-at="2020-08-20T13:35:48 IST" finished-at="2020-08-20T13:35:49 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanUp -->
+      </class> <!-- frontEndTesting.RegistrationTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
